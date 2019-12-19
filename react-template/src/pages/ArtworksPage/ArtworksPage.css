@@ -1,0 +1,18 @@
+.artworks-section {
+  background-image: url(../AboutPage/white.png);
+  padding-bottom: 10%;
+}
+
+.artworks-title {
+  position: relative;
+  background: -webkit-linear-gradient(#19181A, #8A8A8A);
+  opacity: 0.1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  .artworks-title {
+    opacity: 0.2;
+  }
+}
