@@ -31,11 +31,10 @@ h1 {
 	font-size: 150px;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 100;
+	opacity: 0.1;
 }
 
 .section {
-	position: relative;
-	top: -65px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	min-height: 100vh;
@@ -47,7 +46,6 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
 	animation: image-load 2.5s;
-	justify-content: center;
 }
 
 .header {
@@ -92,12 +90,15 @@ h1 {
 @media (max-width: 414px) { 
 	h1 {
 		font-size: 65px;
+		opacity: 0.2;
 	}
 }
 
 /* MOBILE LANDSCAPE */
 @media (min-width: 568px) and (max-width: 812px) { 
-
+	h1 {
+		font-size: 80px;
+	}
 }
 
 /* TABLET PORTRAIT */
@@ -105,11 +106,19 @@ h1 {
 	.section {
 		top: 0;
 	}
+
+	h1 {
+		font-size: 100px;
+	}
 }
 
 /* TABLET LANDSCAPE */
 @media (min-width: 1024px) and (max-width: 1112px) {
 	.section {
 		top: 0;
+	}
+
+	h1 {
+		font-size: 120px;
 	}
 }

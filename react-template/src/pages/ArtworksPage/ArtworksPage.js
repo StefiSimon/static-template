@@ -10,6 +10,9 @@ class ArtworksPage extends Component {
             <header>
               <h1 className="artworks-title">ART WORKS</h1>
             </header>
+            <div className="artworks-text">
+              Soon
+            </div>
           </div>
         </section>
       </div>

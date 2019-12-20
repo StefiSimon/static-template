@@ -10,6 +10,7 @@ function App() {
         <header className="header-desktop">
           <nav>
             <ul>
+              <li><a href="#landing">home</a></li>
               <li><a href="#about">about</a></li>
               <li><a href="#collections">collections</a></li>
               <li><a href="#artworks">artworks</a></li>

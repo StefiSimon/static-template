@@ -6,13 +6,43 @@
 .artworks-title {
   position: relative;
   background: -webkit-linear-gradient(#19181A, #8A8A8A);
-  opacity: 0.1;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.artworks-text {
+  font-weight: 200;
+  color: #8A8A8A;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
 @media screen and (max-width: 768px) {
+}
+
+/* MOBILE PORTRAIT */
+@media (max-width: 414px) { 
   .artworks-title {
-    opacity: 0.2;
+    opacity: 0.3;
   }
+  
+  .artworks-text {
+    font-size: 16px;
+  }
+}
+
+/* MOBILE LANDSCAPE */
+@media (min-width: 568px) and (max-width: 825px) { 
+  .artworks-text {
+    font-size: 18px;
+  }
+}
+
+/* TABLET PORTRAIT */
+@media (min-width: 768px) and (max-width: 834px) {
+}
+
+/* TABLET LANDSCAPE */
+@media (min-width: 1024px) and (max-width: 1112px) {
+
 }

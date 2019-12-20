@@ -7,7 +7,6 @@
 .about-title {
   position: relative;
   background: -webkit-linear-gradient(#19181A, #8A8A8A);
-  opacity: 0.1;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -116,18 +115,62 @@
 
 /* MOBILE PORTRAIT */
 @media (max-width: 414px) { 
+  .about-title {
+    opacity: 0.3;
+  }
+  
+  .timeline-container {
+    padding: 0 8px;
+  }
 
+  .about-text-header {
+    font-size: 20px;
+  }
+
+  .about-text {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .collection-name {
+    font-size: 16px;
+  }
+
+  .collection-location {
+    font-size: 14px;
+  }
+
+  .collection-year {
+    font-size: 16px;
+  }
 }
 
 /* MOBILE LANDSCAPE */
 @media (min-width: 568px) and (max-width: 825px) { 
-  .about-title {
-    font-size: 100px;
+  .timeline-container {
+    padding: 0 8px;
   }
-}
+  
+  .about-text-header {
+    font-size: 20px;
+  }
 
-/* TABLET PORTRAIT */
-@media (min-width: 768px) and (max-width: 834px) {
+  .about-text {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .collection-name {
+    font-size: 16px;
+  }
+
+  .collection-location {
+    font-size: 14px;
+  }
+
+  .collection-year {
+    font-size: 16px;
+  }
 }
 
 /* TABLET LANDSCAPE */
@@ -139,7 +182,4 @@
 
 /* ALL LANDSCAPE */
 @media (max-width: 1200px) {
-  .about-title {
-    opacity: 0.2;
-  }
 }

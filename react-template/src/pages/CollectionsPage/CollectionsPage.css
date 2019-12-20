@@ -4,16 +4,17 @@
 }
 
 .collections-title {
+  opacity: 0.15;
   word-wrap: break-word;
   background: -webkit-linear-gradient(#ffffff, #3F3838);
-  opacity: 0.1;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-@media screen and (max-width: 768px) {
+/* MOBILE PORTRAIT */
+@media (max-width: 414px) { 
   .collections-title {
+    font-size: 45px;
     opacity: 0.3;
-    font-size: 48px;
   }
 }

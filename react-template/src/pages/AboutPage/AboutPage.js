@@ -31,7 +31,7 @@ class AboutPage extends Component {
                 <div className="collection-year left">
                   2019
                 </div>
-                <span class="vertical-top"></span>
+                <span className="vertical-top"></span>
                 <div className="collection-list">
                   <div className="right">
                     <p className="collection-name">Teritorii dedicate sufletului</p>
@@ -61,7 +61,7 @@ class AboutPage extends Component {
                     <p className="collection-location">Sala Pasilor Pierduti, Al.I.cuza University, Iasi</p>
                   </div>
                 </div>
-                <span class="vertical-middle"></span>
+                <span className="vertical-middle"></span>
                 <div className="collection-year right">
                   2018
                 </div>
@@ -70,7 +70,7 @@ class AboutPage extends Component {
                 <div className="collection-year left">
                   2017
                 </div>
-                <span class="vertical-bottom"></span>
+                <span className="vertical-bottom"></span>
                 <div className="collection-list">
                   <div className="right">
                     <p className="collection-name">Expresii</p>
