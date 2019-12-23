@@ -1,5 +1,6 @@
 .contact-section {
   background-image: url(../LandingPage/black.png);
+  padding-bottom: 10%;
 }
 
 .contact-title {
@@ -38,9 +39,9 @@
   margin-top: 5%;
 }
 
-.contact-group input, .contact-group textarea, .contact-button button {
+.contact-group input, .contact-group textarea {
   min-width: 300px;
-  width: 30vw;
+  width: 40vw;
   background-color: transparent;
   border: 1px solid #3F3838;
   outline: 0;
@@ -75,7 +76,7 @@
 }
 
 .contact-button {
-
+  margin-top: 5%;
 }
 
 @media (max-width: 768px) {
@@ -93,5 +94,32 @@
 @media (max-width: 414px) { 
   .contact-title {
     opacity: 0.3;
+  }
+  .contact-group input, .contact-group textarea, .contact-button button {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE LANDSCAPE */
+@media (min-width: 568px) and (max-width: 812px) { 
+  .contact-group input, .contact-group textarea, .contact-button button {
+    font-size: 16px;
+    width: 80vw;
+  }
+}
+
+/* TABLET PORTRAIT */
+@media (min-width: 768px) and (max-width: 834px) {
+  .contact-group input, .contact-group textarea, .contact-button button {
+    font-size: 18px;
+    width: 70vw;
+  }
+}
+
+/* TABLET LANDSCAPE */
+@media (min-width: 1024px) and (max-width: 1112px) {
+	.contact-group input, .contact-group textarea, .contact-button button {
+    font-size: 18px;
+    width: 60vw;
   }
 }

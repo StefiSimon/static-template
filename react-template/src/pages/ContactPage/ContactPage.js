@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import fbIconDesktop from './fb 30.svg';
+import gmIconDesktop from './gmail 30.svg';
 import igIconDesktop from './ig 30.svg';
-import fbIconMobile from './fb 24.svg';
+import gmIconMobile from './gmail 24.svg';
 import igIconMobile from './ig 24.svg';
 import './ContactPage.css';
 
@@ -18,9 +18,9 @@ class ContactPage extends Component {
   };
   render() {
     const { name, message } = this.state;
-    const emailHref = 'mailto:abc@example.com?subject=Email from ' + name + '&body=' + message;
-    const facebookLink = "https://facebook.com";
-    const instagramLink = "https://instagram.com";
+    const emailHref = 'mailto:razvan.simon10@gmail.com?subject=Email from ' + name + '&body=' + message;
+    const gmailLink = "mailto:razvan.simon10@gmail.com";
+    const instagramLink = "https://www.instagram.com/r.simonn/";
     return (
       <div>
         <section id="contact" className="contact-section section">
@@ -28,13 +28,13 @@ class ContactPage extends Component {
             <header>
               <h1 className="contact-title">CONTACT</h1>
             </header>
-            <div className="contact-social-desktop">
-              <a href={facebookLink} target="_blank" rel="noopener noreferrer"><img src={fbIconDesktop} alt="facebook" /></a>
-              <a href={instagramLink} target="_blank" rel="noopener noreferrer"><img src={igIconDesktop} alt="instagram" /></a>
-            </div>
             <div className="contact-social-mobile">
-              <a href={facebookLink} target="_blank" rel="noopener noreferrer"><img src={fbIconMobile} alt="facebook" /></a>
               <a href={instagramLink} target="_blank" rel="noopener noreferrer"><img src={igIconMobile} alt="instagram" /></a>
+              <a href={gmailLink}><img src={gmIconMobile} alt="gmail" /></a>
+            </div>
+            <div className="contact-social-desktop">
+              <a href={instagramLink} target="_blank" rel="noopener noreferrer"><img src={igIconDesktop} alt="instagram" /></a>
+              <a href={gmailLink}><img src={gmIconDesktop} alt="gmail" /></a>
             </div>
             <div className="contact-form">
               <div className="contact-group">
