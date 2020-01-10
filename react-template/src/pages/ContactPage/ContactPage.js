@@ -44,7 +44,7 @@ class ContactPage extends Component {
                 <textarea name="message" type="text" placeholder="Your message" onChange={(e) => this.onInputChange(e)} />
               </div>
               <div className="contact-button">
-                <button type="button">
+                <button type="button" className="button">
                   <a href={emailHref}>
                     Send Email
                   </a>

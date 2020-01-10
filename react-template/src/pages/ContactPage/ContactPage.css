@@ -1,5 +1,5 @@
 .contact-section {
-  background-image: url(../LandingPage/black.png);
+  background-image: url(../LandingPage/black.jpg);
   padding-bottom: 10%;
 }
 
@@ -77,6 +77,11 @@
 
 .contact-button {
   margin-top: 5%;
+}
+
+.contact-button button {
+  width: 40vw;
+  min-width: 300px;
 }
 
 @media (max-width: 768px) {
