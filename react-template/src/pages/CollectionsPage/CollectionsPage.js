@@ -12,57 +12,96 @@ import painting9 from '../../paintings/9.jpg';
 import painting10 from '../../paintings/10.jpg';
 import painting11 from '../../paintings/11.jpg';
 import painting12 from '../../paintings/12.jpg';
+import bigPainting1 from '../../paintings/one.jpg';
+import bigPainting2 from '../../paintings/two.jpg';
+import bigPainting3 from '../../paintings/three.jpg';
+import bigPainting4 from '../../paintings/four.jpg';
+import bigPainting5 from '../../paintings/five.jpg';
+import bigPainting6 from '../../paintings/six.jpg';
+import bigPainting7 from '../../paintings/seven.jpg';
+import bigPainting8 from '../../paintings/eight.jpg';
+import bigPainting9 from '../../paintings/nine.jpg';
+import bigPainting10 from '../../paintings/ten.jpg';
+import bigPainting11 from '../../paintings/eleven.jpg';
+import bigPainting12 from '../../paintings/twelve.jpg';
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
 
 export const carouselPaintings = [
   {
-    name: 'Stars',
-    picture: painting1
-  },
-  {
-    name: 'Reason is nothing',
-    picture: painting2
-  },
-  {
-    name: 'Fairplay',
-    picture: painting3
-  },
-  {
-    name: 'Fruit of the poisonous tree',
-    picture: painting4
+    name: 'R.S.',
+    picture: painting7,
+    bigPicture: bigPainting7,
+    dimensions: '30 x 40 cm',
   },
   {
     name: 'Bar',
-    picture: painting5
-  },
-  {
-    name: 'Links',
-    picture: painting6
-  },
-  {
-    name: 'R.S.',
-    picture: painting7
+    picture: painting5,
+    bigPicture: bigPainting5,
+    dimensions: '40 x 50 cm',
+    isLargeImage: true
   },
   {
     name: 'Loyalty',
-    picture: painting8
+    picture: painting8,
+    bigPicture: bigPainting8,
+    dimensions: '60 x 80 cm',
   },
   {
-    name: 'Last night',
-    picture: painting9
+    name: 'Stars',
+    picture: painting1,
+    bigPicture: bigPainting1,
+    dimensions: '100 x 120 cm',
+    isLargeImage: true
+  },
+  {
+    name: 'Fairplay',
+    picture: painting3,
+    bigPicture: bigPainting3,
+    dimensions: '80 x 120 cm',
+    isLargeImage: true
   },
   {
     name: 'Law of attraction',
-    picture: painting10
+    picture: painting10,
+    bigPicture: bigPainting10,
+    dimensions: '50 x 70 cm',
   },
   {
     name: 'Boardwalk',
-    picture: painting11
+    picture: painting11,
+    bigPicture: bigPainting11,
+    dimensions: '60 x 80 cm',
+  },
+  {
+    name: 'Links',
+    picture: painting6,
+    bigPicture: bigPainting6,
+    dimensions: '50 x 70 cm',
+  },
+  {
+    name: 'Reason is nothing',
+    picture: painting2,
+    bigPicture: bigPainting2,
+    dimensions: '80 x 100 cm',
+  },
+  {
+    name: 'Fruit of the poisonous tree',
+    picture: painting4,
+    bigPicture: bigPainting4,
+    dimensions: '50 x 70 cm',
+  },
+  {
+    name: 'Last night',
+    picture: painting9,
+    bigPicture: bigPainting9,
+    dimensions: '60 x 80 cm',
   },
   {
     name: 'Every decision you make affects every facet of every other fuc*ing thing. (Tony Soprano)',
-    picture: painting12
+    picture: painting12,
+    bigPicture: bigPainting12,
+    dimensions: '50 x 70 cm',
   }
 ];
 
@@ -77,7 +116,7 @@ class CollectionsPage extends Component {
           <div className="collection-container">
             <div className="collection-info">
               <p className="collection-year">2019</p>
-              <p className="collection-name">Causality</p>
+              <p className="collection-title">Causality</p>
               <p className="collection-desc">
                 12 artworks.
                 <br></br>
