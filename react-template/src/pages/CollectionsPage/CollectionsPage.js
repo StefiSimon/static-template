@@ -106,7 +106,7 @@ export const carouselPaintings = [
 ];
 
 class CollectionsPage extends Component {
-  render() {
+  render() { 
     return (
       <div>
         <section id="collections" className="collections-section section">
@@ -133,7 +133,7 @@ class CollectionsPage extends Component {
               </div>
             </div>
             <div className="collection-carousel">
-              <Carousel>
+              <Carousel useKeyboardArrows>
                 {carouselPaintings.map(painting => (
                   <div className="collection-painting-container">
                     <img alt={painting.name} src={painting.picture} className="collection-painting" />

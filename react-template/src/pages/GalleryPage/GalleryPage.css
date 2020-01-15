@@ -27,7 +27,7 @@
   font-weight: 300;
   padding: 8px 0;
   opacity: 0.75;
-  width: 40vw;
+  width: 50vw;
   line-height: 30px;
   letter-spacing: 0.5px;
   position: relative;
@@ -96,8 +96,105 @@
 
 .modal-picture {
   height: 90vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .modal-picture img {
   height: 100%;
+}
+
+/* TABLET DOWN  */ 
+@media (max-width: 1023px) {
+  .picture-image {
+    width: 100%;
+    margin: 0 !important;
+    order: 2 !important;
+  }
+  .picture-info {
+    text-align: left;
+    order: 1 !important;
+    text-align: left !important;
+    width: 100%;
+  }
+  .gallery-picture {
+    flex-direction: column;
+  }
+  .picture-icon {
+    display: none;
+  }
+}
+
+/* MOBILE PORTRAIT */
+@media (max-width: 414px) { 
+  .gallery-title {
+    font-size: 55px;
+    opacity: 0.25;
+  }
+  .gallery-pictures-container {
+    width: 80vw;
+  }
+  .gallery-picture .picture-name {
+    font-size: 20px;
+  }
+  .gallery-picture .picture-details {
+    font-size: 14px;
+  }
+  .gallery-description {
+    font-size: 14px;
+  }
+  .gallery-description {
+    bottom: 30px;
+    width: 80vw;
+    font-size: 14px;
+  }
+}
+
+/* MOBILE LANDSCAPE */
+@media (min-width: 568px) and (max-width: 812px) { 
+  .gallery-description {
+    width: 70vw;
+    bottom: 30px;
+  }
+  .picture-image {
+    justify-content: left;
+  }
+  .picture-image img:nth-of-type(2) {
+    max-height: 90vh;
+    max-width: 100%;
+  }
+}
+
+/* TABLET PORTRAIT */
+@media (min-width: 768px) and (max-width: 834px) {
+  .gallery-picture .picture-name {
+    font-size: 22px;
+  }
+  .gallery-picture .picture-details {
+    font-size: 16px;
+  }
+  .gallery-description {
+    font-size: 16px;
+  }
+}
+
+/* TABLET LANDSCAPE */
+@media (min-width: 1024px) and (max-width: 1112px) {
+  .gallery-description {
+    bottom: 80px;
+    width: 70vw;
+  }
+  .picture-image {
+    margin: 0 5% !important
+  }
+  .modal-picture {
+    height: 80vh;
+  }
+  
+  .modal-picture img {
+    max-height: 95vh;
+    height: auto;
+    max-width: 90vw;
+  }
 }

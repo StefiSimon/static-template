@@ -28,13 +28,21 @@
 }
 
 .close-icon {
+  width: 30px;
   position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0.4;
+  top: 24px;
+  right: 24px;
+  opacity: 0.5;
   cursor: pointer;
 }
 
 .close-icon:hover {
   opacity: 1;
+}
+
+
+@media (max-width: 1023px) {
+  .modal {
+    display: none;
+  }
 }

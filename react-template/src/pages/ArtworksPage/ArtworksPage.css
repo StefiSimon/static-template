@@ -1,6 +1,7 @@
 .artworks-section {
   background-image: url(../AboutPage/white.jpg);
   padding-bottom: 10%;
+  min-height: auto;
 }
 
 .artworks-title {

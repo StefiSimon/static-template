@@ -8,7 +8,9 @@ import './ContactPage.css';
 class ContactPage extends Component {
   state = {
     name: '',
-    message: ''
+    message: '',
+    nameError: '',
+    messageError: ''
   };
   onInputChange = (e) => {
     e.persist();
@@ -16,11 +18,25 @@ class ContactPage extends Component {
       [e.target.name]: e.target.value
     })
   };
-  render() {
+  validateForm = () => {
     const { name, message } = this.state;
+    if (name.length === 0) {
+      this.setState({
+        nameError: 'Please fill in your name before submitting'
+      });
+    }
+    if (message.length === 0) {
+      this.setState({
+        messageError: 'Please fill in your name before submitting'
+      });
+    }
+  }
+  render() {
+    const { name, message, nameError, messageError } = this.state;
     const emailHref = 'mailto:razvan.simon10@gmail.com?subject=Email from ' + name + '&body=' + message;
     const gmailLink = "mailto:razvan.simon10@gmail.com";
     const instagramLink = "https://www.instagram.com/r.simonn/";
+    const isSubmitDisabled = nameError.length > 0 || messageError.length > 0;
     return (
       <div>
         <section id="contact" className="contact-section section">
@@ -39,12 +55,14 @@ class ContactPage extends Component {
             <div className="contact-form">
               <div className="contact-group">
                 <input name="name" type="text" placeholder="Name" onChange={(e) => this.onInputChange(e)} />
+                {/* {nameError.length > 0 && <span className="form-error">{nameError}</span>} */}
               </div>
               <div className="contact-group">
                 <textarea name="message" type="text" placeholder="Your message" onChange={(e) => this.onInputChange(e)} />
+                {/* {messageError.length > 0 && <span className="form-error">{messageError}</span>} */}
               </div>
               <div className="contact-button">
-                <button type="button" className="button">
+                <button type="button" className="button" onClick={this.validateForm} disabled={isSubmitDisabled}>
                   <a href={emailHref}>
                     Send Email
                   </a>

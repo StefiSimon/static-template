@@ -32,7 +32,7 @@ class GalleryPage extends Component {
     });
   };
   renderPictures = () => {
-    const { isModalOpen, currentImgName, currentImgSrc } = this.state;
+    const { isModalOpen, currentImgSrc } = this.state;
     return carouselPaintings.map((picture, index) => {
       const isOdd = index % 2 === 1;
       const pictureDetailsStyles = (loading) => {

@@ -5,9 +5,9 @@ import './Modal.css';
 const Modal = ({ handleClose, handleBlur, show, children }) => {
   return (
     <div className={show ? "modal display-block" : "modal display-none"}>
+      <img src={crossIcon} onClick={handleClose} className="close-icon" alt="close" />
       <section className="modal-main" onBlur={handleBlur}>
         {children}
-        <img src={crossIcon} onClick={handleClose} className="close-icon" alt="close" />
       </section>
     </div>
   );

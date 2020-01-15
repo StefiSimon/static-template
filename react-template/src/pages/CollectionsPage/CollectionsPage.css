@@ -49,7 +49,7 @@
 }
 
 .collection-painting {
-  object-fit: cover;
+  object-fit: contain;
   height: 100%;
 }
 
@@ -63,13 +63,81 @@
   min-width: 310px;
 }
 
-/* MOBILE PORTRAIT */
-@media (max-width: 414px) { 
+@media (max-width: 825px) {
+  .collection-info {
+    order: 2;
+  }
+  .collection-container {
+    flex-direction: column;
+  }
+  .collection-carousel {
+    order: 1;
+  }
+}
+
+
+/* MOBILE PORTRAIT & LANDSCAPE */
+@media (max-width: 825px) { 
   .collections-title {
     font-size: 45px;
     opacity: 0.3;
   }
+  .explore-button button {
+    width: 85vw;
+    min-width: 275px;
+  }
+  .collection-info {
+    width: 80%;
+  }
+  .collection-desc {
+    font-size: 14px;
+  }
+  .collection-year {
+    font-size: 18px;
+  }
+  .collection-title {
+    font-size: 20px;
+  }  
+  .collection-carousel {
+    width: 95%;
+    padding-bottom: 5%;
+  }
+  .collection-carousel ul {
+    padding-inline-start: 0;
+  }
+  .collection-painting-container {
+    max-height: 60vh;
+  }
 }
+
+/* MOBILE LANDSCAPE */
+@media (min-width: 568px) and (max-width: 825px) {
+  .collection-info {
+    width: 70%;
+  }
+  .explore-button button {
+    width: 70vw;
+    min-width: 275px;
+  }
+  .collection-painting-container {
+    max-height: 90vh;
+  }
+}
+
+/* TABLET PORTRAIT */
+@media (min-width: 768px) and (max-width: 824px) and (min-height: 1000px) {
+  .collection-painting-container {
+    max-height: 40vh;
+  }
+}
+
+/* TABLET LANDSCAPE */
+@media (min-width: 1024px) and (max-width: 1400px) {
+	.collection-info, .collection-carousel {
+    width: 40%;
+  }
+}
+
 
 /* CAROUSEL STYLES */
 .carousel .control-arrow, .carousel.carousel-slider .control-arrow {
@@ -180,8 +248,6 @@
       bottom: 0;
       margin-top: 0;
       padding: 5px; }
-      .carousel.carousel-slider .control-arrow:hover {
-        background: rgba(0, 0, 0, 0.2); }
   .carousel .slider-wrapper {
     overflow: hidden;
     margin: auto;
@@ -296,3 +362,5 @@
     display: none; }
   .carousel:hover .slide .legend {
     opacity: 1; }
+
+    
