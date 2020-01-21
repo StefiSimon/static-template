@@ -53,15 +53,44 @@ h1 {
 	font-weight: 300;
 }
 
+.header-overlay {
+	width: 100%;
+	height: 70px;
+	z-index: 50;
+	position: fixed;
+	background: transparent;
+	transition: all 300ms ease-in-out;
+	display: none;
+}
+
+.header-overlay.header-transparent {
+	background: transparent;
+}
+
+.header-overlay.header-background {
+	background: rgba(25, 24, 26, 0.8);
+}
+
 .header-mobile {
 	display: none;
 }
 
 .header-desktop {
+	z-index: 50;
 	position: fixed;
-	top: 2.5%;
 	display: flex;
 	width: 100%;
+	padding: 8px;
+	background: transparent;
+	transition: all 300ms ease-in-out;
+}
+
+.header-desktop.header-background {
+	background: rgba(25, 24, 26, 0.8);
+}
+
+.header-desktop.header-transparent {
+	background: transparent;
 }
 
 .header-desktop nav {
@@ -86,6 +115,16 @@ h1 {
 	font-weight: 100;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
+	text-shadow: none;
+	-webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+}
+
+.header-desktop nav ul li a:hover {
+	color: #c4c4c4;
+	text-shadow: 0 0 10px rgba(234, 234, 234, .5), 0 0 20px rgba(234, 234, 234, .45), 0 0 30px rgba(234, 234, 234, .4), 0 0 40px rgba(234, 234, 234, .35), 0 0 50px rgba(234, 234, 234, .3), 0 0 60px rgba(234, 234, 234, .25), 0 0 70px rgba(234, 234, 234, .2), 0 0 80px rgba(234, 234, 234, .1), 0 0 90px rgba(234, 234, 234, 0);
 }
 
 .header-desktop nav ul li a span {
@@ -106,7 +145,11 @@ button.button {
 }
 
 button.button:hover {
-	box-shadow: 0 4px 8px rgba(234, 234, 234, .2);
+	box-shadow: 0 5px 15px rgba(234, 234, 234, .2);
+}
+
+button.button:hover a {
+	color: #c4c4c4;
 }
 
 button a {
@@ -117,6 +160,10 @@ button a {
   text-decoration: none;
   color: #8a8a8a;
 	font-family: 'Roboto', sans-serif;
+	-webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
 }
 
 @keyframes image-load {
@@ -130,6 +177,17 @@ button a {
 	}
 	.header-mobile {
 		display: block;
+	}
+	.header-overlay {
+		display: block;
+	}
+	.header-mobile.header-background {
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.3);
+	}
+	.gallery-title, .about-title, .collections-title, .contact-title, .artworks-title {
+		padding-top: 30px;
 	}
 }
 
@@ -175,8 +233,8 @@ button a {
   position: fixed;
   width: 30px;
   height: 24px;
-  left: 36px;
-  top: 36px;
+  left: 24px;
+  top: 24px;
 }
 
 .bm-burger-button button {
@@ -185,7 +243,7 @@ button a {
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-	background: linear-gradient(to right, #19181A, #8A8A8A);
+	background: #8a8a8a;
 	opacity: 0.4 !important;
 	height: 1.5px !important;
 }
@@ -241,10 +299,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 	outline: 0;
 }
 
-.bm-item-list a:focus {
-	color: #eaeaea;
-}
-
 /* Individual item */
 .bm-item {
   display: inline-block;
@@ -253,4 +307,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 2px 4px rgba(234, 234, 234, .2);
+  }
+  to {
+    text-shadow: 0 4px 8px rgba(234, 234, 234, .2);
+  }
 }

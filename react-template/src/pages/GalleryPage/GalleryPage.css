@@ -124,13 +124,17 @@
   .picture-icon {
     display: none;
   }
+  .gallery-section {
+    background-repeat: repeat-y;
+    background-size: contain;
+  }
 }
 
 /* MOBILE PORTRAIT */
 @media (max-width: 414px) { 
   .gallery-title {
     font-size: 55px;
-    opacity: 0.25;
+    opacity: 0.3;
   }
   .gallery-pictures-container {
     width: 80vw;
