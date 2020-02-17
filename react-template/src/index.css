@@ -180,6 +180,7 @@ button a {
 	}
 	.header-overlay {
 		display: block;
+		height: 48px;
 	}
 	.header-mobile.header-background {
 		width: 100%;
@@ -231,10 +232,10 @@ button a {
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  width: 30px;
-  height: 24px;
-  left: 24px;
-  top: 24px;
+  width: 22px;
+  height: 18px;
+  left: 16px;
+  top: 16px;
 }
 
 .bm-burger-button button {
@@ -245,7 +246,7 @@ button a {
 .bm-burger-bars {
 	background: #8a8a8a;
 	opacity: 0.4 !important;
-	height: 1.5px !important;
+	height: 1px !important;
 }
 
 /* Position and sizing of clickable cross button */

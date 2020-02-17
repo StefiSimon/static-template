@@ -89,10 +89,3 @@
     width: 25%;
   }
 }
-
-/* TABLET LANDSCAPE */
-@media (min-width: 1024px) and (max-width: 1112px) {
-  .scroll-icon img {
-    width: 20%;
-  }
-}

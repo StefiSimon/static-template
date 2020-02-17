@@ -11,14 +11,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+.contact-social-desktop a {
+  padding: 8px;
+}
+
 .contact-social-desktop img, .contact-social-mobile img {
   opacity: 0.35;
   padding: 0 16px;
-  transition: 500ms ease-in-out;
-}
-
-.contact-social-desktop img:hover, .contact-social-mobile img:hover {
-  opacity: 0.6;
 }
 
 .contact-social-desktop {

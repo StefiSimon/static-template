@@ -78,7 +78,7 @@ class GalleryPage extends Component {
                     {(src, loading) => (
                       <Fragment>
                         {loading && <Loader />}
-                        <img src={src} />
+                        <img src={src} alt="gallery painting" />
                       </Fragment>
                     )}
                   </ProgressiveImage>

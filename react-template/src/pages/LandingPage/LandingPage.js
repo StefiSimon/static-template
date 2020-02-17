@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Logo from '../../components/Logo';
 import scrollIcon from './arrow-down.png';
 import './LandingPage.css';
+import { motion } from 'framer-motion';
 
 class LandingPage extends Component {
   render() {
@@ -17,7 +18,8 @@ class LandingPage extends Component {
             </div>
             <div className="scroll-icon">
               <a href="#about">
-                <img src={scrollIcon} alt="scroll" />
+                <motion.img src={scrollIcon} alt="scroll" whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}/>
               </a>
             </div>
           </div>

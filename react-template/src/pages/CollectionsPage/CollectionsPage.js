@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { motion } from 'framer-motion';
 import './CollectionsPage.css';
 import painting1 from '../../paintings/1.jpg';
 import painting2 from '../../paintings/2.jpg';
@@ -39,7 +40,8 @@ export const carouselPaintings = [
     picture: painting5,
     bigPicture: bigPainting5,
     dimensions: '40 x 50 cm',
-    isLargeImage: true
+    isLargeImage: true,
+    isSold: true
   },
   {
     name: 'Loyalty',
@@ -66,6 +68,7 @@ export const carouselPaintings = [
     picture: painting10,
     bigPicture: bigPainting10,
     dimensions: '50 x 70 cm',
+    isSold: true
   },
   {
     name: 'Boardwalk',
@@ -92,7 +95,7 @@ export const carouselPaintings = [
     dimensions: '50 x 70 cm',
   },
   {
-    name: 'Last night',
+    name: 'Last light',
     picture: painting9,
     bigPicture: bigPainting9,
     dimensions: '60 x 80 cm',
@@ -114,7 +117,7 @@ class CollectionsPage extends Component {
             <h1 className="collections-title">COLLECTIONS</h1>
           </header>
           <div className="collection-container">
-            <div className="collection-info">
+            <motion.div className="collection-info">
               <p className="collection-year">2019</p>
               <p className="collection-title">Causality</p>
               <p className="collection-desc">
@@ -131,11 +134,11 @@ class CollectionsPage extends Component {
                   <Link to='/gallery'>Explore gallery</Link>
                 </button>
               </div>
-            </div>
+            </motion.div>
             <div className="collection-carousel">
               <Carousel useKeyboardArrows>
                 {carouselPaintings.map(painting => (
-                  <div className="collection-painting-container">
+                  <div className="collection-painting-container" key={painting.name}>
                     <img alt={painting.name} src={painting.picture} className="collection-painting" />
                     <p className="legend">{painting.name}</p>
                   </div>

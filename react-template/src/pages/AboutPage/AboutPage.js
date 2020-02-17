@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { motion } from 'framer-motion';
 // import Logo from '../../components/Logo';
 import './AboutPage.css';
 
@@ -9,7 +10,7 @@ class AboutPage extends Component {
         <section id="about" className="about-section section">
           <div className="content">
             <header>
-              <h1 className="about-title bounceInLeft">ABOUT r.SIMON</h1>
+              <h1 className="about-title">ABOUT r.SIMON</h1>
             </header>
             <p className="about-text-header header">
               biography

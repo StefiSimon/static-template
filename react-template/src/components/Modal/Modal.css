@@ -17,6 +17,38 @@
   transform: translate(-50%,-50%);
 }
 
+.close {
+  position: absolute;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  opacity: 0.1;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 0.3;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background: linear-gradient(#ffffff, #8a8a8a);
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
 .display-block {
   opacity: 1;
   z-index: 200;
@@ -26,20 +58,6 @@
   opacity: 0;
   z-index: -1;
 }
-
-.close-icon {
-  width: 30px;
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.close-icon:hover {
-  opacity: 1;
-}
-
 
 @media (max-width: 1023px) {
   .modal {

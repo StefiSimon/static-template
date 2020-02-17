@@ -4,6 +4,7 @@ import igIconDesktop from './ig 30.svg';
 import gmIconMobile from './gmail 24.svg';
 import igIconMobile from './ig 24.svg';
 import './ContactPage.css';
+import { motion } from 'framer-motion';
 
 class ContactPage extends Component {
   state = {
@@ -49,8 +50,18 @@ class ContactPage extends Component {
               <a href={gmailLink}><img src={gmIconMobile} alt="gmail" /></a>
             </div>
             <div className="contact-social-desktop">
-              <a href={instagramLink} target="_blank" rel="noopener noreferrer"><img src={igIconDesktop} alt="instagram" /></a>
-              <a href={gmailLink}><img src={gmIconDesktop} alt="gmail" /></a>
+              <motion.a whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.3 },
+              }}
+              style={{ scale: 0.9 }}
+              whileTap={{ scale: 0.8 }} href={instagramLink} target="_blank" rel="noopener noreferrer"><img src={igIconDesktop} alt="instagram" /></motion.a>
+              <motion.a whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.3 },
+              }}
+              style={{ scale: 0.9 }}
+              whileTap={{ scale: 0.8 }}href={gmailLink}><img src={gmIconDesktop} alt="gmail" /></motion.a>
             </div>
             <div className="contact-form">
               <div className="contact-group">

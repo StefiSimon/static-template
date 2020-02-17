@@ -167,8 +167,8 @@
   .carousel .control-disabled.control-arrow {
     opacity: 0;
     filter: alpha(opacity=0);
-    cursor: inherit;
-    display: none; }
+    cursor: inherit; }
+    /* display: none; } */
   .carousel .control-prev.control-arrow {
     left: 0; }
     .carousel .control-prev.control-arrow:before {
@@ -295,8 +295,7 @@
     min-width: 100%;
     margin: 0;
     position: relative;
-    text-align: center;
-    background: transparent; }
+    text-align: center; }
     .carousel .slide img {
       width: 100%;
       vertical-align: top;
