@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { motion } from 'framer-motion';
 import './CollectionsPage.css';
 import painting1 from '../../paintings/1.jpg';
 import painting2 from '../../paintings/2.jpg';
@@ -117,7 +116,7 @@ class CollectionsPage extends Component {
             <h1 className="collections-title">COLLECTIONS</h1>
           </header>
           <div className="collection-container">
-            <motion.div className="collection-info">
+            <div className="collection-info">
               <p className="collection-year">2019</p>
               <p className="collection-title">Causality</p>
               <p className="collection-desc">
@@ -134,7 +133,7 @@ class CollectionsPage extends Component {
                   <Link to='/gallery'>Explore gallery</Link>
                 </button>
               </div>
-            </motion.div>
+            </div>
             <div className="collection-carousel">
               <Carousel useKeyboardArrows>
                 {carouselPaintings.map(painting => (

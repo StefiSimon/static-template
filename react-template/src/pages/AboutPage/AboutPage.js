@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { motion } from 'framer-motion';
-// import Logo from '../../components/Logo';
 import './AboutPage.css';
 
 class AboutPage extends Component {
