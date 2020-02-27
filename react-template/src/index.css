@@ -87,6 +87,8 @@ h1 {
 
 .header-desktop.header-background {
 	background: rgba(25, 24, 26, 0.8);
+	width: auto;
+	height: 100%;
 }
 
 .header-desktop.header-transparent {
@@ -101,11 +103,24 @@ h1 {
 	display: flex;
 	width: 100%;
 	justify-content: space-around;
+	transition: all 500ms ease-in-out;
+}
+
+.header-desktop.header-background nav ul {
+	display: block;
+	width: auto;
+	height: 100%;
+	padding-inline-start: 0;
+	padding: 16px;
 }
 
 .header-desktop nav ul li {
 	list-style: none;
 	padding: 0 16px;
+}
+
+.header-desktop.header-background nav ul li {
+	padding: 16px 0;
 }
 
 .header-desktop nav ul li a {
@@ -171,7 +186,7 @@ button a {
   100% { opacity: 1; }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1400px) {
 	.header-desktop {
 		display: none;
 	}
