@@ -30,22 +30,26 @@ class App extends Component {
       isMenuWithBackground: pageScrollHeight > 200
     });
 
+    if (window.location.pathname !== '/gallery') {
     const heightDiff = window.scrollY / window.innerHeight;
-    switch(true) {
-      case heightDiff > 0 && heightDiff < 1: 
-        this.setMenuWhite(true);
-        break;
-      case heightDiff > 1 && heightDiff < 2.77:
-        this.setMenuWhite(false);
-        break;
-      case heightDiff > 2.77 && heightDiff < 3.91:
-        this.setMenuWhite(true);
-        break;
-      case heightDiff > 3.91 && heightDiff < 4.55:
-        this.setMenuWhite(false);
-        break;
-      default:
-        this.setMenuWhite(true);
+      switch(true) {
+        case heightDiff > 0 && heightDiff < 1: 
+          this.setMenuWhite(true);
+          break;
+        case heightDiff > 1 && heightDiff < 2.77:
+          this.setMenuWhite(false);
+          break;
+        case heightDiff > 2.77 && heightDiff < 3.91:
+          this.setMenuWhite(true);
+          break;
+        case heightDiff > 3.91 && heightDiff < 4.55:
+          this.setMenuWhite(false);
+          break;
+        default:
+          this.setMenuWhite(true);
+      }
+    } else {
+      this.setMenuWhite(false);
     }
   };
 

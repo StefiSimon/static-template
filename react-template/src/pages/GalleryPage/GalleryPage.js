@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { carouselPaintings } from '../CollectionsPage/CollectionsPage';
+import carouselPaintings from '../CollectionsPage/paintingList';
 import fullScreenIcon from './full-screen.png';
 import './GalleryPage.css';
 import ProgressiveImage from 'react-progressive-image';
@@ -62,7 +62,7 @@ class GalleryPage extends Component {
               >
                 <p className="picture-name">{picture.name}</p>
                 <p className="picture-details">{picture.dimensions}</p>
-                <p className="picture-details">mixed media on canvas</p>
+                <p className="picture-details">{picture.technique}</p>
               </div>
               <div className="picture-image" style={pictureImageStyles} onClick={this.openModal}>
                 <img src={fullScreenIcon} alt="fullscreen" className="picture-icon" name={index} />
