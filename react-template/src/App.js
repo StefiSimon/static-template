@@ -10,23 +10,45 @@ const url = getURL();
 class App extends Component {
   state = {
     isMenuOpen: false,
-    isMenuWithBackground: false
+    isMenuWithBackground: false,
+    isMenuWhite: true
   };
+
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-  }
+  };
+
+  setMenuWhite = (value) => {
+    this.setState({
+      isMenuWhite: value
+    })
+  };
+
   handleScroll = () => {
     const pageScrollHeight = window.pageYOffset;
-    if (pageScrollHeight > 200) {
-      this.setState({
-        isMenuWithBackground: true
-      })
-    } else {
-      this.setState({
-        isMenuWithBackground: false
-      })
+    this.setState({
+      isMenuWithBackground: pageScrollHeight > 200
+    });
+
+    const heightDiff = window.scrollY / window.innerHeight;
+    switch(true) {
+      case heightDiff > 0 && heightDiff < 1: 
+        this.setMenuWhite(true);
+        break;
+      case heightDiff > 1 && heightDiff < 2.77:
+        this.setMenuWhite(false);
+        break;
+      case heightDiff > 2.77 && heightDiff < 3.91:
+        this.setMenuWhite(true);
+        break;
+      case heightDiff > 3.91 && heightDiff < 4.55:
+        this.setMenuWhite(false);
+        break;
+      default:
+        this.setMenuWhite(true);
     }
   };
+
   setIsMenuOpen = (value) => {
     this.setState({
       isMenuOpen: value
@@ -36,7 +58,7 @@ class App extends Component {
     this.setIsMenuOpen(false);
   };
   render() {
-    const { isMenuOpen,isMenuWithBackground } = this.state;
+    const { isMenuOpen, isMenuWithBackground, isMenuWhite } = this.state;
     return (
       <div>
         <BrowserRouter>
@@ -53,13 +75,14 @@ class App extends Component {
           
           <header className={`${isMenuWithBackground ? 'header-background' : 'header-transparent'} header-desktop`}>
             <nav>
-              <ul>
+              <ul className={isMenuWhite ? 'white-text' : 'black-text'}>
                 <li><a href={`${url}/#landing`}>home</a></li>
                 <li><a href={`${url}/#about`}>about</a></li>
                 <li><a href={`${url}/#collections`}>collections</a></li>
                 <li><a href={`${url}/#artworks`}>artworks</a></li>
                 <li><a href={`${url}/#contact`}>contact</a></li>
               </ul>
+              <div className="vertical-divider"></div>
             </nav>
           </header>
           <Route exact path="/" component={HomePage} />
