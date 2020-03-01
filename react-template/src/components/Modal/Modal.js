@@ -1,11 +1,11 @@
 import React from 'react';
 import './Modal.css';
 
-const Modal = ({ handleClose, handleBlur, show, children }) => {
+const Modal = ({ handleClose, show, children, onKeyUp }) => {
   return (
-    <div className={show ? "modal display-block" : "modal display-none"}>
+    <div className={show ? "modal display-block modal-enter" : "modal display-none modal-leave"} onKeyUp={onKeyUp}>
       <span onClick={handleClose} className="close" />
-      <section className="modal-main" onBlur={handleBlur}>
+      <section className="modal-main">
         {children}
       </section>
     </div>

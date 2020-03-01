@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import gmIconDesktop from './gmail 30.svg';
-import igIconDesktop from './ig 30.svg';
-import gmIconMobile from './gmail 24.svg';
-import igIconMobile from './ig 24.svg';
+import gmIconDesktop from './mailDesktop.svg';
+import igIconDesktop from './instagramDesktop.svg';
+import gmIconMobile from './mailMobile.svg';
+import igIconMobile from './instagramMobile.svg';
 import './ContactPage.css';
 import { motion } from 'framer-motion';
 
@@ -61,7 +61,7 @@ class ContactPage extends Component {
                 transition: { duration: 0.3 },
               }}
               style={{ scale: 0.9 }}
-              whileTap={{ scale: 0.8 }}href={gmailLink}><img src={gmIconDesktop} alt="gmail" /></motion.a>
+              whileTap={{ scale: 0.8 }}href={gmailLink}><img src={gmIconDesktop} alt="mail" /></motion.a>
             </div>
             <div className="contact-form">
               <div className="contact-group">

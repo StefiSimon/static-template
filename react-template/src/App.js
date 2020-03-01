@@ -67,7 +67,7 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <div className={`${isMenuWithBackground && !isMenuOpen ? 'header-background' : 'header-transparent'} header-overlay`} />
-          <header className="header-mobile">
+          <header className={`header-mobile ${isMenuWhite ? 'white' : 'black'}`}>
             <Menu isOpen={isMenuOpen} onStateChange={({ isOpen }) => this.setIsMenuOpen(isOpen)}>
               <a className="menu-item" href="/" onClick={this.onMenuItemSelect}>home</a>
               <a className="menu-item" href="/#about" onClick={this.onMenuItemSelect}>about</a>

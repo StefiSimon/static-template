@@ -31,6 +31,11 @@ class GalleryPage extends Component {
       currentImgSrc: currentImageObj.bigPicture
     });
   };
+  onEsc = (e) => {
+    if (e.which === 27) {
+      this.closeModal();
+    }
+  };
   renderPictures = () => {
     const { isModalOpen, currentImgSrc } = this.state;
     return carouselPaintings.map((picture, index) => {
@@ -71,14 +76,13 @@ class GalleryPage extends Component {
               <Modal
                 show={isModalOpen}
                 handleClose={this.closeModal}
-                handleBlur={this.closeModal}
+                onKeyUp={this.onEsc}
               >
                 <div className="modal-picture">
                   <ProgressiveImage delay={1000} src={currentImgSrc}>
                     {(src, loading) => (
                       <Fragment>
-                        {loading && <Loader />}
-                        <img src={src} alt="gallery painting" />
+                        {loading && isModalOpen ? <Loader /> : <img src={src} alt="gallery painting" tabIndex="1" onBlur={this.closeModal} />}
                       </Fragment>
                     )}
                   </ProgressiveImage>
