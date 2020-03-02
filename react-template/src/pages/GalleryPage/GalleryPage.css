@@ -19,7 +19,7 @@
   word-wrap: break-word;
   background: -webkit-linear-gradient(#19181A, #8A8A8A);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -webkit-text-fill-color: rgb(99, 99, 99);
 }
 
 .gallery-description {
