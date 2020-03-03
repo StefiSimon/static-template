@@ -19,7 +19,7 @@
   word-wrap: break-word;
   background: -webkit-linear-gradient(#19181A, #8A8A8A);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: rgb(99, 99, 99);
 }
 
 .gallery-description {
@@ -96,6 +96,7 @@
 
 .modal-picture {
   height: 90vh;
+  width: auto;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -103,6 +104,7 @@
 
 .modal-picture img {
   height: 100%;
+  outline: 0;
 }
 
 /* TABLET DOWN  */ 

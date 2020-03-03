@@ -9,7 +9,7 @@
   word-wrap: break-word;
   background: -webkit-linear-gradient(#ffffff, #3F3838);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
 .collection-container {
@@ -161,8 +161,8 @@
   .carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
     margin: 0 5px;
     display: inline-block;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
+    border-top: 8px solid rgba(255, 255, 255, 0);
+    border-bottom: 8px solid rgba(255, 255, 255, 0);
     content: ''; }
   .carousel .control-disabled.control-arrow {
     opacity: 0;

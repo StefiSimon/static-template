@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import gmIconDesktop from './gmail 30.svg';
-import igIconDesktop from './ig 30.svg';
-import gmIconMobile from './gmail 24.svg';
-import igIconMobile from './ig 24.svg';
+import gmIconDesktop from './mailDesktop.svg';
+import igIconDesktop from './instagramDesktop.svg';
+import gmIconMobile from './mailMobile.svg';
+import igIconMobile from './instagramMobile.svg';
 import './ContactPage.css';
 import { motion } from 'framer-motion';
 
@@ -15,7 +15,9 @@ class ContactPage extends Component {
   };
   onInputChange = (e) => {
     e.persist();
+    const error = `${e.target.name}Error`;
     this.setState({
+      [error]: '',
       [e.target.name]: e.target.value
     })
   };
@@ -28,16 +30,21 @@ class ContactPage extends Component {
     }
     if (message.length === 0) {
       this.setState({
-        messageError: 'Please fill in your name before submitting'
+        messageError: 'Please write a message before submitting'
       });
     }
   }
-  render() {
-    const { name, message, nameError, messageError } = this.state;
+  getMailLink = () => {
+    const { name, message } = this.state;
     const emailHref = 'mailto:razvan.simon10@gmail.com?subject=Email from ' + name + '&body=' + message;
+    const isSubmitDisabled = name.length === 0 || message.length === 0;
+    return isSubmitDisabled ? <a>Send email</a> : <a href={emailHref}>Send Email</a>;
+  }
+  render() {
+    const { nameError, messageError } = this.state;
+    const isSubmitDisabled = nameError.length > 0 || messageError.length > 0;
     const gmailLink = "mailto:razvan.simon10@gmail.com";
     const instagramLink = "https://www.instagram.com/r.simonn/";
-    const isSubmitDisabled = nameError.length > 0 || messageError.length > 0;
     return (
       <div>
         <section id="contact" className="contact-section section">
@@ -51,32 +58,30 @@ class ContactPage extends Component {
             </div>
             <div className="contact-social-desktop">
               <motion.a whileHover={{
-                scale: 1.1,
+                scale: 1.2,
                 transition: { duration: 0.3 },
               }}
-              style={{ scale: 0.9 }}
-              whileTap={{ scale: 0.8 }} href={instagramLink} target="_blank" rel="noopener noreferrer"><img src={igIconDesktop} alt="instagram" /></motion.a>
+              style={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} href={instagramLink} target="_blank" rel="noopener noreferrer"><img src={igIconDesktop} alt="instagram" /></motion.a>
               <motion.a whileHover={{
-                scale: 1.1,
+                scale: 1.2,
                 transition: { duration: 0.3 },
               }}
-              style={{ scale: 0.9 }}
-              whileTap={{ scale: 0.8 }}href={gmailLink}><img src={gmIconDesktop} alt="gmail" /></motion.a>
+              style={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}href={gmailLink}><img src={gmIconDesktop} alt="mail" /></motion.a>
             </div>
             <div className="contact-form">
               <div className="contact-group">
                 <input name="name" type="text" placeholder="Name" onChange={(e) => this.onInputChange(e)} />
-                {/* {nameError.length > 0 && <span className="form-error">{nameError}</span>} */}
+                {nameError.length > 0 && <span className="form-error">{nameError}</span>}
               </div>
               <div className="contact-group">
                 <textarea name="message" type="text" placeholder="Your message" onChange={(e) => this.onInputChange(e)} />
-                {/* {messageError.length > 0 && <span className="form-error">{messageError}</span>} */}
+                {messageError.length > 0 && <span className="form-error textarea">{messageError}</span>}
               </div>
               <div className="contact-button">
                 <button type="button" className="button" onClick={this.validateForm} disabled={isSubmitDisabled}>
-                  <a href={emailHref}>
-                    Send Email
-                  </a>
+                  {this.getMailLink()}
                 </button>
               </div>
             </div>

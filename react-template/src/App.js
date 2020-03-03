@@ -30,22 +30,26 @@ class App extends Component {
       isMenuWithBackground: pageScrollHeight > 200
     });
 
+    if (window.location.pathname !== '/gallery') {
     const heightDiff = window.scrollY / window.innerHeight;
-    switch(true) {
-      case heightDiff > 0 && heightDiff < 1: 
-        this.setMenuWhite(true);
-        break;
-      case heightDiff > 1 && heightDiff < 2.77:
-        this.setMenuWhite(false);
-        break;
-      case heightDiff > 2.77 && heightDiff < 3.91:
-        this.setMenuWhite(true);
-        break;
-      case heightDiff > 3.91 && heightDiff < 4.55:
-        this.setMenuWhite(false);
-        break;
-      default:
-        this.setMenuWhite(true);
+      switch(true) {
+        case heightDiff > 0 && heightDiff < 1: 
+          this.setMenuWhite(true);
+          break;
+        case heightDiff > 1 && heightDiff < 2.77:
+          this.setMenuWhite(false);
+          break;
+        case heightDiff > 2.77 && heightDiff < 3.91:
+          this.setMenuWhite(true);
+          break;
+        case heightDiff > 3.91 && heightDiff < 4.55:
+          this.setMenuWhite(false);
+          break;
+        default:
+          this.setMenuWhite(true);
+      }
+    } else {
+      this.setMenuWhite(false);
     }
   };
 
@@ -63,7 +67,7 @@ class App extends Component {
       <div>
         <BrowserRouter>
           <div className={`${isMenuWithBackground && !isMenuOpen ? 'header-background' : 'header-transparent'} header-overlay`} />
-          <header className="header-mobile">
+          <header className={`header-mobile ${isMenuWhite ? 'white' : 'black'}`}>
             <Menu isOpen={isMenuOpen} onStateChange={({ isOpen }) => this.setIsMenuOpen(isOpen)}>
               <a className="menu-item" href="/" onClick={this.onMenuItemSelect}>home</a>
               <a className="menu-item" href="/#about" onClick={this.onMenuItemSelect}>about</a>
