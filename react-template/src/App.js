@@ -71,8 +71,7 @@ class App extends Component {
             <Menu isOpen={isMenuOpen} onStateChange={({ isOpen }) => this.setIsMenuOpen(isOpen)}>
               <a className="menu-item" href="/" onClick={this.onMenuItemSelect}>home</a>
               <a className="menu-item" href="/#about" onClick={this.onMenuItemSelect}>about</a>
-              <a className="menu-item" href="/#collections" onClick={this.onMenuItemSelect}>collections</a>
-              <a className="menu-item" href="/#artworks" onClick={this.onMenuItemSelect}>artworks</a>
+              <a className="menu-item" href="/#collections" onClick={this.onMenuItemSelect}>artworks</a>
               <a className="menu-item" href="/#contact" onClick={this.onMenuItemSelect}>contact</a>
             </Menu>
           </header>
@@ -82,8 +81,7 @@ class App extends Component {
               <ul className={isMenuWhite ? 'white-text' : 'black-text'}>
                 <li><a href={`${url}/#landing`}>home</a></li>
                 <li><a href={`${url}/#about`}>about</a></li>
-                <li><a href={`${url}/#collections`}>collections</a></li>
-                <li><a href={`${url}/#artworks`}>artworks</a></li>
+                <li><a href={`${url}/#collections`}>artworks</a></li>
                 <li><a href={`${url}/#contact`}>contact</a></li>
               </ul>
               <div className="vertical-divider"></div>

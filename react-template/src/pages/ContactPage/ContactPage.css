@@ -1,12 +1,11 @@
 .contact-section {
-  background-image: url(../LandingPage/black.jpg);
+  background-image: url(../AboutPage/white.jpg);
   padding-bottom: 10%;
 }
 
 .contact-title {
-  opacity: 0.15;
   position: relative;
-  background: -webkit-linear-gradient(#ffffff, #3F3838);
+  background: -webkit-linear-gradient(#19181A, #8A8A8A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -18,7 +17,6 @@
   left: 24px;
   top: 45px;
   width: 40vw;
-  opacity: 0.6;
 }
 
 .form-error.textarea {
@@ -30,7 +28,7 @@
 }
 
 .contact-social-desktop img, .contact-social-mobile img {
-  opacity: 0.35;
+  opacity: 0.5;
   padding: 0 16px;
 }
 
@@ -57,7 +55,7 @@
   min-width: 275px;
   width: 40vw;
   background-color: rgba(255, 255, 255, 0);
-  border: 1px solid #3F3838;
+  border: 1px solid #bbbbbb;
   outline: 0;
   padding: 8px 16px;
   color: #8a8a8a;
@@ -79,8 +77,8 @@
 }
 
 .contact-group input:focus, .contact-group textarea:focus {
-  box-shadow: 0 0 5px #8a8a8a;
-  border: 1px solid #8a8a8a;
+  box-shadow: 0 0 5px #aaaaaa;
+  border: 1px solid #aaaaaa;
 }
 
 .contact-group textarea::placeholder, .contact-group input::placeholder {
@@ -96,6 +94,15 @@
 .contact-button button {
   width: 40vw;
   min-width: 275px;
+  background: linear-gradient(to left, rgba(129, 129, 129, 0.2), rgba(199, 199, 199, 0.3));
+}
+
+.contact-button button:hover {
+  background: rgba(129, 129, 129, 0.3);
+}
+
+.contact-button button:hover a {
+  color: #585757;
 }
 
 .contact-button button a {

@@ -10,7 +10,7 @@ class CollectionsPage extends Component {
       <div>
         <section id="collections" className="collections-section section">
           <header>
-            <h1 className="collections-title">COLLECTIONS</h1>
+            <h1 className="collections-title">ART WORKS</h1>
           </header>
           <div className="collection-container">
             <div className="collection-info">

@@ -38,7 +38,7 @@ class ContactPage extends Component {
     const { name, message } = this.state;
     const emailHref = 'mailto:razvan.simon10@gmail.com?subject=Email from ' + name + '&body=' + message;
     const isSubmitDisabled = name.length === 0 || message.length === 0;
-    return isSubmitDisabled ? <a>Send email</a> : <a href={emailHref}>Send Email</a>;
+    return <a href={emailHref} disabled={isSubmitDisabled}>Send Email</a>;
   }
   render() {
     const { nameError, messageError } = this.state;
