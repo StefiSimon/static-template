@@ -66,6 +66,7 @@ const carouselPaintings = [
     name: 'Parc esplanada',
     picture: painting6,
     bigPicture: bigPainting6,
+    isLargeImage: true,
     dimensions: '50 x 70 cm',
     technique: 'acrylic, emulsion paint, gouache, pastel on canvas'
   },

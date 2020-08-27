@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import '../ArtworksPage.css';
 
-const CollectionContainer = ({ year, title, description, carouselPaintings }) => {
+const CollectionContainer = ({ year, title, description, carouselPaintings, galleryUrl }) => {
   return (
     <div className="collection-container">
         <div className="collection-info">
@@ -15,7 +15,7 @@ const CollectionContainer = ({ year, title, description, carouselPaintings }) =>
         </p>
         <div className="explore-button">
             <button type="button" className="button">
-            <Link to='/gallery'>Explore gallery</Link>
+            <Link to={galleryUrl}>Explore gallery</Link>
             </button>
         </div>
         </div>

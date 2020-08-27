@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route} from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 import HomePage from './pages/HomePage/HomePage';
-import GalleryPage from './pages/GalleryPage/GalleryPage';
 import { getURL } from './utils/url';
+import CausalityPage from './pages/GalleryPage/Causality/CausalityPage';
+import MotAMotPage from './pages/GalleryPage/MotAMot/MotAMotPage';
 
 const url = getURL();
 
@@ -88,7 +89,8 @@ class App extends Component {
             </nav>
           </header>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/gallery" component={GalleryPage} />
+          <Route exact path="/causality" component={CausalityPage} />
+          <Route exact path="/motamot" component={MotAMotPage} />
         </BrowserRouter>
       </div>
     );

@@ -107,7 +107,7 @@ const carouselPaintings = [
     technique: 'acrylic, gouache, pastel on canvas'
   },
   {
-    name: 'Every decision you make affects every facet of every other fuc*ing thing. (Tony Soprano)',
+    name: 'Tony Soprano quote',
     picture: painting12,
     bigPicture: bigPainting12,
     dimensions: '50 x 70 cm',

@@ -15,6 +15,7 @@ const ArtworksPage = () => {
         <CollectionContainer
           year="2020"
           title="Mot-A-Mot"
+          galleryUrl={'/motamot'}
           description={(
             <>
               11 + 1 artworks.
@@ -28,6 +29,7 @@ const ArtworksPage = () => {
         <CollectionContainer 
           year="2019" 
           title="Causality" 
+          galleryUrl={'/causality'}
           description={(
             <>
               12 artworks.

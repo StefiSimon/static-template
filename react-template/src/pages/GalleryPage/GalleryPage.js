@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import carouselPaintings from '../ArtworksPage/causalityPaintingList';
+import cn from 'classnames';
 import fullScreenIcon from './full-screen.png';
 import ProgressiveImage from 'react-progressive-image';
 import Modal from '../../components/Modal/Modal';
@@ -7,7 +7,7 @@ import Loader from '../../components/Loader/Loader';
 
 import './GalleryPage.css';
 
-const GalleryPage = () => {
+const GalleryPage = ({ year, title, description, pictures, sectionStyle, sectionClassName, titleClassName, pictureNameStyle, pictureDetailStyle }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImgSrc, setCurrentImgSrc] = useState('');
 
@@ -22,7 +22,7 @@ const GalleryPage = () => {
 
   const openModal = (e) => {
     const index = e.target.name;
-    const currentImageObj = carouselPaintings[index];
+    const currentImageObj = pictures[index];
     setIsModalOpen(true);
     setCurrentImgSrc(currentImageObj.bigPicture);
   };
@@ -33,8 +33,8 @@ const GalleryPage = () => {
     }
   };
 
-  const renderPictures = () => {
-    return carouselPaintings.map((picture, index) => {
+  const renderPictures = (pictures) => {
+    return pictures.map((picture, index) => {
       const isOdd = index % 2 === 1;
       const pictureDetailsStyles = (loading) => {
         return {
@@ -61,9 +61,9 @@ const GalleryPage = () => {
                 className="picture-info" 
                 style={pictureDetailsStyles(loading)}
               >
-                <p className="picture-name">{picture.name}</p>
-                <p className="picture-details">{picture.dimensions}</p>
-                <p className="picture-details">{picture.technique}</p>
+                <p className="picture-name" style={pictureNameStyle}>{picture.name}</p>
+                <p className="picture-details" style={pictureDetailStyle}>{picture.dimensions}</p>
+                <p className="picture-details" style={pictureDetailStyle}>{picture.technique}</p>
               </div>
               <div className="picture-image" style={pictureImageStyles} onClick={openModal}>
                 <img src={fullScreenIcon} alt="fullscreen" className="picture-icon" name={index} />
@@ -94,24 +94,19 @@ const GalleryPage = () => {
 
   return (
     <div>
-      <section id="gallery" className="gallery-section section">
+      <section id="gallery" className={cn("gallery-section section", sectionClassName)} style={sectionStyle}>
         <header>
-          <h1 className="gallery-title">
-            <span>2019</span>
-            CAUSALITY
+          <h1 className={cn("gallery-title", titleClassName)}>
+            <span>{year}</span>
+            {title.toUpperCase()}
           </h1>
         </header>
         <div className="gallery-container">
           <div className="gallery-description">
-            12 artworks.
-            The project suggests the connection between action and consequence/ cause and effect, 
-            especially in the process of creation, considering that the past acts on the future and vice versa. 
-            It represents an attitude on life, a way of perceiving it. 
-            Huge influences were the representatives of gestualism and the black is a sum of the other colors. 
-            The works are put to maximum value in direct light, because the colors under the black come to surface.
+            {description}
           </div>
           <div className="gallery-pictures-container">
-            {renderPictures()}
+            {renderPictures(pictures)}
           </div>
         </div>
       </section>
