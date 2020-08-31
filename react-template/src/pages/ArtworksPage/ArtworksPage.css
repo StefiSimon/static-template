@@ -1,6 +1,5 @@
 .collections-section {
   background-image: url(../LandingPage/black.jpg);
-  padding-bottom: 10%;
   color: #8a8a8a;
 }
 
@@ -16,7 +15,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5%;
+  padding-bottom: 2.5%;
+  padding-top: 2.5%;
+  border-bottom: 1px solid #242424;
 }
 
 .collection-year {
@@ -70,6 +71,7 @@
   }
   .collection-container {
     flex-direction: column;
+    padding-bottom: 10%;
   }
   .collection-carousel {
     order: 1;
@@ -100,7 +102,7 @@
     font-size: 20px;
   }  
   .collection-carousel {
-    width: 95%;
+    width: 80%;
     padding-bottom: 5%;
   }
   .collection-carousel ul {

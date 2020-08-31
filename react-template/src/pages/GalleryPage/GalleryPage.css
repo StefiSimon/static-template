@@ -22,16 +22,15 @@
 }
 
 .gallery-title.causality {
-  background: -webkit-linear-gradient(#19181A, #8A8A8A);
-  -webkit-text-fill-color: rgb(99, 99, 99);
+  background: -webkit-linear-gradient(#19181A, #b8b8b8);
+  -webkit-text-fill-color: rgb(99, 99, 99, 0);
   word-wrap: break-word;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .gallery-title.motamot {
-  background: -webkit-linear-gradient(#ffffff, #3F3838);
-  -webkit-background-clip: text;
+  background: -webkit-linear-gradient(#ffffff, #000000);
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
   word-wrap: break-word;
   -webkit-background-clip: text;

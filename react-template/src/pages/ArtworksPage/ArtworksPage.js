@@ -20,8 +20,7 @@ const ArtworksPage = () => {
             <>
               11 + 1 artworks.
               <br></br>
-              White. Absence. Void. Link by link. Initiation. Rebirth. Revelation. Progress. Wisdom. Purity. 
-              ’Harmony of silence’(Kandinsky).
+              White. Absence. Void. Link by link. Initiation. Rebirth. [...]
             </>
           )}
           carouselPaintings={motamotPaintings}
@@ -34,11 +33,7 @@ const ArtworksPage = () => {
             <>
               12 artworks.
               <br></br>
-              The project suggests the connection between action and consequence/ cause and effect, 
-              especially in the process of creation, considering that the past acts on the future and vice versa. 
-              It represents an attitude on life, a way of perceiving it. 
-              Huge influences were the representatives of gestualism and the black is a sum of the other colors. 
-              The works are put to maximum value in direct light, because the colors under the black come to surface.
+              The project suggests the connection between action and consequence/ cause and effect, [...]
             </>
           )}
           carouselPaintings={causalityPaintings} 

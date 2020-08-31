@@ -31,26 +31,30 @@ class App extends Component {
       isMenuWithBackground: pageScrollHeight > 200
     });
 
-    if (window.location.pathname !== '/gallery') {
+    const path = window.location.pathname;
+
+    if (path !== '/causality' && path !== '/motamot') {
     const heightDiff = window.scrollY / window.innerHeight;
       switch(true) {
-        case heightDiff > 0 && heightDiff < 1: 
+        case heightDiff > 0 && heightDiff <= 1: 
           this.setMenuWhite(true);
           break;
-        case heightDiff > 1 && heightDiff < 2.77:
+        case heightDiff > 1 && heightDiff <= 2.77:
           this.setMenuWhite(false);
           break;
-        case heightDiff > 2.77 && heightDiff < 3.91:
+        case heightDiff > 2.77 && heightDiff <= 4.40:
           this.setMenuWhite(true);
           break;
-        case heightDiff > 3.91 && heightDiff < 4.55:
+        case heightDiff > 4.40 && heightDiff <= 4.55:
           this.setMenuWhite(false);
           break;
         default:
           this.setMenuWhite(true);
       }
-    } else {
+    } else if (path === '/causality') {
       this.setMenuWhite(false);
+    } else {
+      this.setMenuWhite(true);
     }
   };
 

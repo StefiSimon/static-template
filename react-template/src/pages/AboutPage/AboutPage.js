@@ -26,11 +26,26 @@ const AboutPage = () => {
             collective exhibitions
           </p>
           <div className="timeline-container">
+
+          <div className="timeline-row">
+              <div className="collection-list">
+                <div className="left">
+                  <p className="collection-name">Abstract Expression</p>
+                  <p className="collection-location">online</p>
+                </div>
+                <span className="left"></span>
+              </div>
+              <span className="vertical-top"></span>
+              <div className="collection-year right">
+                2020
+              </div>
+            </div>
+
             <div className="timeline-row">
               <div className="collection-year left">
                 2019
               </div>
-              <span className="vertical-top"></span>
+              <span className="vertical-middle"></span>
               <div className="collection-list">
                 <div className="right">
                   <p className="collection-name">Teritorii dedicate sufletului</p>
@@ -43,8 +58,14 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
+
             <div className="timeline-row">
               <div className="collection-list">
+                <div className="left">
+                  <p className="collection-name">TramArt Studio</p>
+                  <p className="collection-location">Iasi</p>
+                </div>
+                <span className="left"></span>
                 <div className="left">
                   <p className="collection-name">Visiting Art History</p>
                   <p className="collection-location">Sala Pasilor Pierduti, Al.I.cuza University, Iasi</p>
@@ -65,6 +86,7 @@ const AboutPage = () => {
                 2018
               </div>
             </div>
+
             <div className="timeline-row">
               <div className="collection-year left">
                 2017
