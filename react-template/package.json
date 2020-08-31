@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "classnames": "^2.2.6",
     "framer-motion": "^1.8.4",
+    "optimized-images-loader": "^0.4.0",
     "react": "^16.12.0",
     "react-burger-menu": "^2.6.13",
     "react-dom": "^16.12.0",

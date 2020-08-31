@@ -122,23 +122,35 @@
 
 /* TABLET DOWN  */ 
 @media (max-width: 1023px) {
+  .gallery-title.causality {
+    -webkit-text-fill-color: rgb(99, 99, 99, 0.5);
+  }
+
+  .gallery-title.motamot {
+    -webkit-text-fill-color: rgba(143, 49, 49, 0.3);
+  }
+
   .picture-image {
     width: 100%;
     margin: 0 !important;
     order: 2 !important;
   }
+
   .picture-info {
     text-align: left;
     order: 1 !important;
     text-align: left !important;
     width: 100%;
   }
+
   .gallery-picture {
     flex-direction: column;
   }
+
   .picture-icon {
     display: none;
   }
+
   .gallery-section {
     background-repeat: repeat-y;
     background-size: contain;
