@@ -89,6 +89,7 @@ const carouselPaintings = [
     name: 'Reason is nothing',
     picture: painting2,
     bigPicture: bigPainting2,
+    isLargeImage: true,
     dimensions: '80 x 100 cm',
     technique: 'acrylic, spray, gouache, pastel on canvas'
   },

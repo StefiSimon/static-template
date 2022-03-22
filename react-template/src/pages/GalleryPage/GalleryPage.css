@@ -13,6 +13,10 @@
   background-image: url(../LandingPage/black.jpg);
 }
 
+.gallery-section.tataraces {
+  background-image: url('./grey.png');
+}
+
 .gallery-title span {
   display: block;
   font-size: 30px;

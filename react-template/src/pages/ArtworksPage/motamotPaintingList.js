@@ -28,6 +28,7 @@ const carouselPaintings = [
     name: 'Words',
     picture: painting1,
     bigPicture: bigPainting1,
+    isLargeImage: true,
     dimensions: '40 x 40 cm',
     technique: 'acrylic, emulsion paint, gouache on canvas'
   },
@@ -35,6 +36,7 @@ const carouselPaintings = [
     name: 'Portrait no.1',
     picture: painting2,
     bigPicture: bigPainting2,
+    isLargeImage: true,
     dimensions: '40 x 50 cm',
     technique: 'acrylic, emulsion paint, gouache , pastel on canvas'
   },

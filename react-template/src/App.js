@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { slide as Menu } from 'react-burger-menu';
 import HomePage from './pages/HomePage/HomePage';
-import { getURL } from './utils/url';
 import CausalityPage from './pages/GalleryPage/Causality/CausalityPage';
 import MotAMotPage from './pages/GalleryPage/MotAMot/MotAMotPage';
+import TataracesPage from './pages/GalleryPage/Tataraces/TataracesPage';
 
-const url = getURL();
+const url = window.location.origin;
 
 class App extends Component {
   state = {
@@ -33,25 +33,25 @@ class App extends Component {
 
     const path = window.location.pathname;
 
-    if (path !== '/causality' && path !== '/motamot') {
-    const heightDiff = window.scrollY / window.innerHeight;
-      switch(true) {
-        case heightDiff > 0 && heightDiff <= 1: 
+    if (path !== '/causality' && path !== '/motamot' && path !== '/tataraces') {
+      const heightDiff = window.scrollY / window.innerHeight;
+      switch (true) {
+        case heightDiff > 0 && heightDiff <= 1:
           this.setMenuWhite(true);
           break;
-        case heightDiff > 1 && heightDiff <= 2.77:
+        case heightDiff > 1 && heightDiff <= 4:
           this.setMenuWhite(false);
           break;
-        case heightDiff > 2.77 && heightDiff <= 4.40:
+        case heightDiff > 4 && heightDiff <= 6.5:
           this.setMenuWhite(true);
           break;
-        case heightDiff > 4.40 && heightDiff <= 4.55:
+        case heightDiff > 6.5 && heightDiff <= 10:
           this.setMenuWhite(false);
           break;
         default:
           this.setMenuWhite(true);
       }
-    } else if (path === '/causality') {
+    } else if (path === '/causality' || path === '/tataraces') {
       this.setMenuWhite(false);
     } else {
       this.setMenuWhite(true);
@@ -80,7 +80,7 @@ class App extends Component {
               <a className="menu-item" href="/#contact" onClick={this.onMenuItemSelect}>contact</a>
             </Menu>
           </header>
-          
+
           <header className={`${isMenuWithBackground ? 'header-background' : 'header-transparent'} header-desktop`}>
             <nav>
               <ul className={isMenuWhite ? 'white-text' : 'black-text'}>
@@ -95,10 +95,11 @@ class App extends Component {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/causality" component={CausalityPage} />
           <Route exact path="/motamot" component={MotAMotPage} />
+          <Route exact path="/tataraces" component={TataracesPage} />
         </BrowserRouter>
       </div>
     );
   }
-} 
+}
 
 export default App;

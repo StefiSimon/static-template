@@ -15,9 +15,9 @@ const MotAMotPage = () => {
     const pictureDetailStyle = {
         color: '#8a8a8a'
     };
-    
+
     return (
-        <GalleryPage 
+        <GalleryPage
             year="2020"
             title="Mot-A-Mot"
             description="11 + 1 artworks.
@@ -29,7 +29,7 @@ const MotAMotPage = () => {
             pictureNameStyle={pictureNameStyle}
             pictureDetailStyle={pictureDetailStyle}
         />
-  );
+    );
 };
 
 export default MotAMotPage;
