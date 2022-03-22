@@ -23,11 +23,41 @@ const AboutPage = () => {
             Graduated from "George Enescu" Fine Arts University, 2019
           </p>
           <p className="about-text-header header">
+            solo exhibitions
+          </p>
+          <p className="collection-year center">
+            2021
+          </p>
+          <p className="collection-name">
+            Simon’s People
+          </p>
+          <p className="collection-location">
+            Galeria N.Tonitza, Iasi
+          </p>
+          <p className="about-text-header header">
             collective exhibitions
           </p>
           <div className="timeline-container">
 
-          <div className="timeline-row">
+            <div className="timeline-row">
+              <div className="collection-year left">
+                2021
+              </div>
+              <span className="vertical-top"></span>
+              <div className="collection-list">
+                <div className="right">
+                  <p className="collection-name">Mecena Art Gallery</p>
+                  <p className="collection-location">Bucuresti</p>
+                </div>
+                <span className="right"></span>
+                <div className="right">
+                  <p className="collection-name">Atelier 35</p>
+                  <p className="collection-location">Galeria La Gard, Iasi</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="timeline-row">
               <div className="collection-list">
                 <div className="left">
                   <p className="collection-name">Abstract Expression</p>
@@ -35,7 +65,7 @@ const AboutPage = () => {
                 </div>
                 <span className="left"></span>
               </div>
-              <span className="vertical-top"></span>
+              <span className="vertical-middle"></span>
               <div className="collection-year right">
                 2020
               </div>

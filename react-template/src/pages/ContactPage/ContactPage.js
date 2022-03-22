@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import gmIconDesktop from './mailDesktop.svg';
 import igIconDesktop from './instagramDesktop.svg';
 import fbIconDesktop from './facebookDesktop.svg';
-import gmIconMobile from './mailMobile.svg';
-import igIconMobile from './instagramMobile.svg';
-import fbIconMobile from './facebookMobile.svg';
 import { motion } from 'framer-motion';
 
 import './ContactPage.css';
@@ -14,7 +11,7 @@ const ContactPage = () => {
   const [message, setMessage] = useState('');
   const [nameError, setNameError] = useState('');
   const [messageError, setMessageError] = useState('');
-  
+
   const onInputChange = (e) => {
     e.persist();
     const newValue = e.target.value;
@@ -22,7 +19,7 @@ const ContactPage = () => {
     if (e.target.name === 'name') {
       setNameError('');
       setName(newValue);
-    } 
+    }
     if (e.target.name === 'message') {
       setMessageError('');
       setMessage(newValue);
@@ -56,29 +53,29 @@ const ContactPage = () => {
             <h1 className="contact-title">CONTACT</h1>
           </header>
           <div className="contact-social-mobile">
-            <a href={instagramLink} target="_blank" rel="noopener noreferrer"><img src={igIconMobile} alt="instagram" /></a>
-            <a href={gmailLink}><img src={gmIconMobile} alt="gmail" /></a>
-            <a href={facebookLink} target="_blank" rel="noopener noreferrer"><img src={fbIconMobile} alt="facebook" /></a>
+            <a href={facebookLink} target="_blank" rel="noopener noreferrer"><img src={fbIconDesktop} alt="facebook" /></a>
+            <a href={instagramLink} target="_blank" rel="noopener noreferrer"><img src={igIconDesktop} alt="instagram" /></a>
+            <a href={gmailLink}><img src={gmIconDesktop} alt="gmail" /></a>
           </div>
           <div className="contact-social-desktop">
             <motion.a whileHover={{
               scale: 1.2,
               transition: { duration: 0.3 },
             }}
-            style={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} href={instagramLink} target="_blank" rel="noopener noreferrer"><img src={igIconDesktop} alt="instagram" /></motion.a>
+              style={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} href={facebookLink} target="_blank" rel="noopener noreferrer"><img src={fbIconDesktop} alt="facebook" /></motion.a>
             <motion.a whileHover={{
               scale: 1.2,
               transition: { duration: 0.3 },
             }}
-            style={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 } }href={gmailLink}><img src={gmIconDesktop} alt="mail" /></motion.a>
+              style={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} href={instagramLink} target="_blank" rel="noopener noreferrer"><img src={igIconDesktop} alt="instagram" /></motion.a>
             <motion.a whileHover={{
               scale: 1.2,
               transition: { duration: 0.3 },
             }}
-            style={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 } }href={facebookLink} target="_blank" rel="noopener noreferrer"><img src={fbIconDesktop} alt="facebook" /></motion.a>
+              style={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }} href={gmailLink}><img src={gmIconDesktop} alt="mail" /></motion.a>
           </div>
           <div className="contact-form">
             <div className="contact-group">

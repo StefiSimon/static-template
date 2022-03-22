@@ -66,22 +66,25 @@
   text-align: right;
 }
 
-.collection-year {
-  width: 50%;
+.collection-year.center {
   font-size: 20px;
   font-weight: 300;
+  text-align: center;
+  margin-bottom: 18px;
 }
 
 .collection-year.right {
   padding-left: 10%;
   text-align: left;
   margin: auto;
+  width: 50%;
 }
 
 .collection-year.left {
   padding-right: 10%;
   text-align: right;
   margin: auto;
+  width: 50%;
 }
 
 .collection-list span {
