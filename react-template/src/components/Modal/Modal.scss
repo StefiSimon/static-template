@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .modal {
   position: fixed;
   top: 0;
@@ -37,7 +39,7 @@
   content: ' ';
   height: 33px;
   width: 2px;
-  background: linear-gradient(#ffffff, #8a8a8a);
+  background: $icon-gradient;
 }
 
 .close:before {

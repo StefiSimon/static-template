@@ -4,7 +4,7 @@ import motamotPaintings from './motamotPaintingList';
 import tataracesPaintings from './tataracesPaintingList';
 import CollectionContainer from './CollectionContainer/CollectionContainer';
 
-import './ArtworksPage.css';
+import './ArtworksPage.scss';
 
 const ArtworksPage = () => {
   return (

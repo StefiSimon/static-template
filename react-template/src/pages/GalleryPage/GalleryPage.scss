@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .gallery-section {
   padding-bottom: 10%;
   background-repeat: no-repeat;
@@ -26,16 +28,26 @@
 }
 
 .gallery-title.causality {
-  background: -webkit-linear-gradient(#19181A, #b8b8b8);
-  -webkit-text-fill-color: rgb(99, 99, 99, 0);
+  background: $title-gradient-dark;
+  -webkit-text-fill-color: rgba(99, 99, 99, 0);
   word-wrap: break-word;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .gallery-title.motamot {
-  background: -webkit-linear-gradient(#ffffff, #000000);
-  -webkit-text-fill-color: rgba(107, 107, 107, 0);
+  background: $title-gradient-light;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  word-wrap: break-word;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.gallery-title.tataraces {
+  background: $title-gradient-grey;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
   word-wrap: break-word;
   -webkit-background-clip: text;
   background-clip: text;
@@ -127,7 +139,7 @@
 /* TABLET DOWN  */ 
 @media (max-width: 1023px) {
   .gallery-title.causality {
-    -webkit-text-fill-color: rgb(99, 99, 99, 0.5);
+    -webkit-text-fill-color: rgba(99, 99, 99, 0.5);
   }
 
   .gallery-title.motamot {

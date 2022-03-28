@@ -4,7 +4,7 @@ import igIconDesktop from './instagramDesktop.svg';
 import fbIconDesktop from './facebookDesktop.svg';
 import { motion } from 'framer-motion';
 
-import './ContactPage.css';
+import './ContactPage.scss';
 
 const ContactPage = () => {
   const [name, setName] = useState('');

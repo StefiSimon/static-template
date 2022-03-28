@@ -4,7 +4,7 @@ import AboutPage from '../AboutPage/AboutPage';
 import CollectionsPage from '../ArtworksPage/ArtworksPage';
 import ContactPage from '../ContactPage/ContactPage';
 
-import './HomePage.css';
+import './HomePage.scss';
 
 const HomePage = () => {
   return (

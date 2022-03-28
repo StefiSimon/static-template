@@ -1,0 +1,15 @@
+$title-gradient-light: -webkit-linear-gradient(rgb(99, 99, 99), rgb(59, 59, 59), rgb(24, 24, 24), rgba(24, 24, 24, 0));
+$title-gradient-dark: -webkit-linear-gradient(rgb(163, 163, 163), rgb(172, 171, 170), rgb(211, 211, 211), rgba(182, 182, 182, 0.5));
+$title-gradient-grey: -webkit-linear-gradient(rgb(195, 195, 195), rgb(164, 164, 164), rgb(138, 138, 138), rgba(125, 125, 125, 0.9));
+
+$icon-gradient: linear-gradient(#ffffff, #8a8a8a);
+
+$button-gradient-light: linear-gradient(to left, rgba(234, 234, 234, 0.1), rgba(138, 138, 138, 0.1));
+$button-gradient-light-hover: linear-gradient(to left, rgba(234, 234, 234, 0.2), rgba(138, 138, 138, 0.2));
+$button-gradient-dark: linear-gradient(to left, rgba(129, 129, 129, 0.2), rgba(199, 199, 199, 0.3));
+
+$separator-gradient: linear-gradient(rgba(0,0,0,0), rgba(25,24,26,1), rgba(0, 0, 0, 1), rgba(25,24,26,1), rgba(0,0,0,0));
+$separator-gradient-right: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(25,24,26,1), rgba(0,0,0,0));
+$separator-gradient-left: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(25,24,26,1), rgba(0,0,0,0));
+$separator-gradient-top: linear-gradient(rgba(0,0,0,0), rgba(25,24,26,1), rgba(0, 0, 0, 1));
+$separator-gradient-bottom: linear-gradient(rgba(0, 0, 0, 1), rgba(25,24,26,1), rgba(0,0,0,0));

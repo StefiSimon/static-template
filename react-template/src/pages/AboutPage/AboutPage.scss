@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .about-section {
   background-image: url(white.jpg);
   padding-bottom: 10%;
@@ -6,7 +8,7 @@
 
 .about-title {
   position: relative;
-  background: -webkit-linear-gradient(#19181A, #8A8A8A);
+  background: $title-gradient-dark;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -24,7 +26,7 @@
   margin-top: 10%;
   font-size: 24px;
   font-weight: 400;
-  color: #19181A;
+  color: #afafaf;
 }
 
 .timeline-container {
@@ -34,12 +36,12 @@
 
 .timeline-container span {
   width: 1.5px;
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(25,24,26,1), rgba(0, 0, 0, 1), rgba(25,24,26,1), rgba(0,0,0,0));
+  background-image: $separator-gradient;
   opacity: 0.2;
 }
 
 .timeline-container span.vertical-top {
-  background-image: linear-gradient(rgba(0,0,0,0), rgba(25,24,26,1), rgba(0, 0, 0, 1));
+  background-image: $separator-gradient-top;
 }
 
 .timeline-container span.vertical-middle {
@@ -47,7 +49,7 @@
 }
 
 .timeline-container span.vertical-bottom {
-  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(25,24,26,1), rgba(0,0,0,0));
+  background-image: $separator-gradient-bottom;
 }
 
 .timeline-row {
@@ -98,11 +100,11 @@
 }
 
 .collection-list span.right {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(25,24,26,1), rgba(0,0,0,0));
+  background-image: $separator-gradient-right;
 }
 
 .collection-list span.left {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(25,24,26,1), rgba(0,0,0,0));
+  background-image: $separator-gradient-left;
 }
 
 .collection-name {

@@ -3,7 +3,7 @@ import Logo from '../../components/Logo';
 import scrollIcon from './arrow-down.png';
 import { motion } from 'framer-motion';
 
-import './LandingPage.css';
+import './LandingPage.scss';
 
 const LandingPage = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './AboutPage.css';
+import './AboutPage.scss';
 
 const AboutPage = () => {
   return (

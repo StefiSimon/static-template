@@ -1,12 +1,13 @@
+@import '../../variables.scss';
+
 .collections-section {
   background-image: url(../LandingPage/black.jpg);
   color: #8a8a8a;
 }
 
 .collections-title {
-  opacity: 0.15;
   word-wrap: break-word;
-  background: -webkit-linear-gradient(#ffffff, #3F3838);
+  background: $title-gradient-light;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }

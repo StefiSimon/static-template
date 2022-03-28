@@ -5,7 +5,7 @@ import ProgressiveImage from 'react-progressive-image';
 import Modal from '../../components/Modal/Modal';
 import Loader from '../../components/Loader/Loader';
 
-import './GalleryPage.css';
+import './GalleryPage.scss';
 
 const GalleryPage = ({ year, title, description, pictures, sectionStyle, sectionClassName, titleClassName, pictureNameStyle, pictureDetailStyle }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

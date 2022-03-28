@@ -8,20 +8,26 @@ import TataracesPage from './pages/GalleryPage/Tataraces/TataracesPage';
 
 const url = window.location.origin;
 
+const menuColors = {
+  WHITE: 'white',
+  BLACK: 'black',
+  GREY: 'grey'
+};
+
 class App extends Component {
   state = {
     isMenuOpen: false,
     isMenuWithBackground: false,
-    isMenuWhite: true
+    menuColor: menuColors.WHITE
   };
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
   };
 
-  setMenuWhite = (value) => {
+  setMenuColor = (menuColor) => {
     this.setState({
-      isMenuWhite: value
+      menuColor
     })
   };
 
@@ -37,24 +43,26 @@ class App extends Component {
       const heightDiff = window.scrollY / window.innerHeight;
       switch (true) {
         case heightDiff > 0 && heightDiff <= 1:
-          this.setMenuWhite(true);
+          this.setMenuColor(menuColors.WHITE);
           break;
         case heightDiff > 1 && heightDiff <= 4:
-          this.setMenuWhite(false);
+          this.setMenuColor(menuColors.BLACK);
           break;
         case heightDiff > 4 && heightDiff <= 6.5:
-          this.setMenuWhite(true);
+          this.setMenuColor(menuColors.WHITE);
           break;
         case heightDiff > 6.5 && heightDiff <= 10:
-          this.setMenuWhite(false);
+          this.setMenuColor(menuColors.BLACK);
           break;
         default:
-          this.setMenuWhite(true);
+          this.setMenuColor(menuColors.WHITE);
       }
-    } else if (path === '/causality' || path === '/tataraces') {
-      this.setMenuWhite(false);
+    } else if (path === '/causality') {
+      this.setMenuColor(menuColors.BLACK);
+    } else if (path === '/motamot') {
+      this.setMenuColor(menuColors.WHITE);
     } else {
-      this.setMenuWhite(true);
+      this.setMenuColor(menuColors.GREY);
     }
   };
 
@@ -67,12 +75,12 @@ class App extends Component {
     this.setIsMenuOpen(false);
   };
   render() {
-    const { isMenuOpen, isMenuWithBackground, isMenuWhite } = this.state;
+    const { isMenuOpen, isMenuWithBackground, menuColor } = this.state;
     return (
       <div>
         <BrowserRouter>
           <div className={`${isMenuWithBackground && !isMenuOpen ? 'header-background' : 'header-transparent'} header-overlay`} />
-          <header className={`header-mobile ${isMenuWhite ? 'white' : 'black'}`}>
+          <header className={`header-mobile ${menuColor}`}>
             <Menu isOpen={isMenuOpen} onStateChange={({ isOpen }) => this.setIsMenuOpen(isOpen)}>
               <a className="menu-item" href="/" onClick={this.onMenuItemSelect}>home</a>
               <a className="menu-item" href="/#about" onClick={this.onMenuItemSelect}>about</a>
@@ -83,7 +91,7 @@ class App extends Component {
 
           <header className={`${isMenuWithBackground ? 'header-background' : 'header-transparent'} header-desktop`}>
             <nav>
-              <ul className={isMenuWhite ? 'white-text' : 'black-text'}>
+              <ul className={`${menuColor}-text`}>
                 <li><a href={`${url}/#landing`}>home</a></li>
                 <li><a href={`${url}/#about`}>about</a></li>
                 <li><a href={`${url}/#collections`}>artworks</a></li>
